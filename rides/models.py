@@ -20,7 +20,7 @@ class Ride(models.Model):
     dropoff_time = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
-        return f"Ride {self.id_ride}: {self.status}"
+        return f"Ride ID: {self.id_ride} | Status:  {self.status}"
 
     class Meta:
         db_table = 'ride'
