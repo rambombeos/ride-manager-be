@@ -5,6 +5,12 @@ import random
 from datetime import timedelta
 from core.management.commands import BaseCommand
 
+STATUS_CHOICES = [
+    ('en-route', 'En Route'),
+    ('pickup', 'Pickup'),
+    ('dropoff', 'Dropoff'),
+]
+
 class Command(BaseCommand):
     help = 'Creates sample rides and ride events'
 
@@ -25,7 +31,7 @@ class Command(BaseCommand):
             rider = random.choice(riders)
             driver = random.choice(drivers)
             
-            status = random.choice(['pending', 'in_progress', 'completed', 'cancelled'])
+            status = random.choice([choice[0] for choice in STATUS_CHOICES])
             pickup_time = timezone.now() + timedelta(hours=random.randint(1, 24))
             dropoff_time = pickup_time + timedelta(minutes=random.randint(15, 120))
 
@@ -40,24 +46,6 @@ class Command(BaseCommand):
                 pickup_time=pickup_time,
                 dropoff_time=dropoff_time
             )
-
-            # Create 2-5 events for each ride
-            for _ in range(random.randint(2, 5)):
-                event_time = timezone.now() + timedelta(minutes=random.randint(0, 120))
-                description = random.choice([
-                    'Ride requested',
-                    'Driver assigned',
-                    'Driver arrived at pickup location',
-                    'Ride started',
-                    'Ride completed',
-                    'Ride cancelled'
-                ])
-
-                RideEvent.objects.create(
-                    id_ride=ride,
-                    description=description,
-                    created_at=event_time
-                )
 
             self.stdout.write(self.style.SUCCESS(f'Created ride and events: Ride ID {ride.id_ride}'))
 
