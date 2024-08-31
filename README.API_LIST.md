@@ -1,9 +1,65 @@
 ## API Documentation
 
-### 1. User Authentication
+### 1. User Management
 
-#### 1.1 Login
-#### 1.2 Logout
+#### 1.1 List Users
+- **Endpoint**: `rides/identity/users/`
+- **Method**: GET
+- **Description**: Retrieve a list of users or a specific user
+- **Headers**: Authorization: Token your_auth_token_here
+- **Response**:
+  ```json
+  [
+    {
+      "id": 1,
+      "username": "johndoe",
+      "email": "johndoe@example.com",
+      "first_name": "John",
+      "last_name": "Doe"
+    },
+    {
+      "id": 2,
+      "username": "janedoe",
+      "email": "janedoe@example.com",
+      "first_name": "Jane",
+      "last_name": "Doe"
+    }
+  ]
+  ```
+
+#### 1.2 Create User
+- **Endpoint**: `rides/identity/users/`
+- **Method**: POST
+- **Description**: Create a new user
+- **Headers**: Authorization: Token your_auth_token_here
+- **Payload**:
+  ```json
+  {
+    "username": "newuser",
+    "email": "newuser@example.com",
+    "first_name": "New",
+    "last_name": "User",
+    "password": "securepassword123"
+  }
+  ```
+- **Response**: Returns the created user object (excluding password)
+
+#### 1.3 Update User
+- **Endpoint**: `rides/identity/users/{id}/`
+- **Method**: PUT/PATCH
+- **Description**: Update an existing user
+- **Headers**: Authorization: Token your_auth_token_here
+- **Payload**: Same as Create User (fields to update)
+- **Response**: Returns the updated user object (excluding password)
+
+#### 1.4 Delete User
+- **Endpoint**: `rides/identity/users/{id}/`
+- **Method**: DELETE
+- **Description**: Remove a user
+- **Headers**: Authorization: Token your_auth_token_here
+- **Response**: 204 No Content
+
+Note: The password field is write-only and will not be returned in GET requests.
 
 ### 2. Rides
 
