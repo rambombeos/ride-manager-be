@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     # libraries
     'rest_framework',
+    'rest_framework.authtoken',
     'corsheaders',
 
     # apps
@@ -62,6 +63,7 @@ MIDDLEWARE = [
 
     # Custom middleware
     'corsheaders.middleware.CorsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'config.urls'
