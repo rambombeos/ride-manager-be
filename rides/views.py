@@ -9,12 +9,15 @@ from rest_framework.response import Response
 from rest_framework import status
 from core.response import BaseResponse
 from rest_framework.permissions import IsAuthenticated
+from core.permissions import superuser_authenticated
 
 class RidePagination(PageNumberPagination):
     page_size = 10
     page_size_query_param = 'page_size'
     max_page_size = 100
 
+
+@superuser_authenticated
 class RideViewSet(viewsets.ModelViewSet):
     queryset = Ride.objects.all().select_related('id_rider', 'id_driver').prefetch_related('events')
     serializer_class = RideSerializer
