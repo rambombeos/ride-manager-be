@@ -66,8 +66,25 @@ The backend should now be running on `http://localhost:8000/`.
 
 - To create sample users for testing, use the custom management command:
   ```
-  python manage.py create_sample_users <number_of_users>
+  python manage.py create_sample_users <total_users>
   ```
+  Replace `<total_users>` with the number of users you want to create.
+  For example, to create 10 sample users:
+  ```
+  python manage.py create_sample_users 10
+  ```
+
+- To create sample rides for testing, use the custom management command:
+  ```
+  python manage.py create_sample_rides <total_users>
+  ```
+  Replace `<total_rides>` with the number of rides you want to create.
+  For example, to create 10 sample rides:
+  ```
+  python manage.py create_sample_rides 10
+  ```
+
+- For more information on available commands, please refer to the [Commands Documentation](README.COMMANDS.md).
 
 - For production deployment, consider using a production-grade web server like Gunicorn and a reverse proxy like Nginx.
 

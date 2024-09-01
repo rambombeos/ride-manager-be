@@ -3,6 +3,15 @@
 ## Overview
 This repository contains the backend application for the RAMBS Ride Manager, a comprehensive ride management system. The backend is built using Django and Django REST Framework, providing a robust and scalable API for ride management operations.
 
+## API Documentation
+For detailed API documentation, please refer to the [API List](README.API_LIST.md).
+
+## Getting Started
+Instructions for setting up and running the backend application can be found in the [Installation Guide](README.INSTALLATION.md).
+
+## Commands
+For information on available management commands, please refer to the [Commands Documentation](README.COMMANDS.md).
+
 ## Technologies
 - Django
 - Django REST Framework
@@ -27,17 +36,9 @@ This repository contains the backend application for the RAMBS Ride Manager, a c
 - PyJWT==2.9.0
 - sqlparse==0.5.1
 
-## API Documentation
-For detailed API documentation, please refer to the [API List](README.API_LIST.md).
 
-## Getting Started
-Instructions for setting up and running the backend application can be found in the [Installation Guide](INSTALLATION.md).
+<!-- ## Contributing
+We welcome contributions to the RAMBS Ride Manager backend. Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started. -->
 
-## Commands
-For information on available management commands, please refer to the [Commands Documentation](README.COMMANDS.md).
-
-## Contributing
-We welcome contributions to the RAMBS Ride Manager backend. Please read our [Contributing Guidelines](CONTRIBUTING.md) for more information on how to get started.
-
-## License
-This project is licensed under the [MIT License](LICENSE).
+<!-- ## License
+This project is licensed under the [MIT License](LICENSE). -->
