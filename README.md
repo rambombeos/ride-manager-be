@@ -12,6 +12,11 @@ Instructions for setting up and running the backend application can be found in 
 ## Commands
 For information on available management commands, please refer to the [Commands Documentation](README.COMMANDS.md).
 
+## Video Demonstration
+Check out our video demonstration of the RAMBS Ride Manager Backend:
+
+[![RAMBS Ride Manager Backend Demo](https://www.loom.com/share/3725c43ad4f746ddb047bbb41f016519?sid=786523c5-fee6-4dcf-a1c7-8803fce00c9c)
+
 ## Technologies
 - Django
 - Django REST Framework
