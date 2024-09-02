@@ -1,5 +1,9 @@
 # RAMBS Ride Manager Backend
 
+## Video Demonstration
+Check out our video demonstration of the RAMBS Ride Manager Backend:
+https://www.loom.com/share/3725c43ad4f746ddb047bbb41f016519?sid=786523c5-fee6-4dcf-a1c7-8803fce00c9c
+
 ## Overview
 This repository contains the backend application for the RAMBS Ride Manager, a comprehensive ride management system. The backend is built using Django and Django REST Framework, providing a robust and scalable API for ride management operations.
 
@@ -12,10 +16,6 @@ Instructions for setting up and running the backend application can be found in 
 ## Commands
 For information on available management commands, please refer to the [Commands Documentation](README.COMMANDS.md).
 
-## Video Demonstration
-Check out our video demonstration of the RAMBS Ride Manager Backend:
-
-https://www.loom.com/share/3725c43ad4f746ddb047bbb41f016519?sid=786523c5-fee6-4dcf-a1c7-8803fce00c9c
 
 ## Technologies
 - Django
